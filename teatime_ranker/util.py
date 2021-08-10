@@ -32,10 +32,7 @@ def authorize():
     print(auth.get_authorization_url())
     verifier = input("Enter the verifier code: ")
     AC_TOKEN, AC_SECRET = auth.get_access_token(verifier)
-    with open(".env", "r+") as f:
-        f.write("\n".join(
-            f.read().split("\n")[:2] + [f"{AC_TOKEN=}", f"{AC_SECRET=}"]
-        ))
+    print(AC_TOKEN, AC_SECRET)
     return tweepy.API(auth)
 
 
