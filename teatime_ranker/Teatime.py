@@ -21,7 +21,6 @@ class Teatime:
         year = today.year
         month = today.month
         day = today.day
-        year, month, day = 2021, 8, 10
         q = textwrap.dedent(f"""\
                 "ティータイムですわ" \
                 since:{year}-{month:02}-{day:02}_14:59:59_JST \
